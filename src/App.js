@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useState } from 'react'
+import FileUpload from './components/FileUpload'
+import ProteinVisualizer from './components/ProteinVisualizer'
 
-function App() {
+const App = () => {
+  const [pdbData, setPdbData] = useState(null)
+
+  const handleFileSelect = (file) => {
+    const reader = new FileReader()
+    reader.onload = () => {
+      setPdbData(reader.result)
+    }
+    reader.readAsText(file)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={styles.app}>
+      <h1 style={styles.title}>🧬 Protein Visualization</h1>
+      <FileUpload onFileSelect={handleFileSelect} />
+      {pdbData && <ProteinVisualizer pdbData={pdbData} />}
     </div>
-  );
+  )
 }
 
-export default App;
+const styles = {
+  app: {
+    textAlign: 'center',
+    fontFamily: 'Arial, sans-serif',
+    padding: '20px',
+    backgroundColor: '#f4f4f4',
+    minHeight: '100vh',
+  },
+  title: {
+    fontSize: '28px',
+    marginBottom: '20px',
+  },
+}
+
+export default App
