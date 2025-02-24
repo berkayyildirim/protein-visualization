@@ -39,7 +39,7 @@ The Protein Data Bank (PDB) is a publicly available repository containing 3D str
 ## 📥 Installation & Setup
 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/protein-visualization.git
+git clone https://github.com/berkayyildirim/protein-visualization.git
 cd protein-visualization
 ```
 2. Install Dependencies
@@ -55,8 +55,8 @@ Now open http://localhost:3000 in your browser.
 ## 🐳 Running the Docker Image
 To pull and run the Docker image from Docker Hub:
 ```bash
-docker pull your-dockerhub-username/protein-visualization
-docker run -p 3000:3000 your-dockerhub-username/protein-visualization
+docker pull byberkayyildirim/protein-visualization
+docker run -p 3000:3000 byberkayyildirim/protein-visualization
 ```
 Now the app should be accessible at http://localhost:3000.
 
