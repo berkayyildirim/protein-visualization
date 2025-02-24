@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# 🧬 Protein Visualization Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+📌 Overview
 
-## Available Scripts
+This project is a React-based web application for visualizing Protein Data Bank (PDB) files. Users can upload PDB files, and the app will render 3D molecular structures using 3Dmol.js. The application is also Dockerized, making it easy to deploy anywhere.
 
-In the project directory, you can run:
+![Protein Visualization](./assets/protein-visualization.png)
 
-### `npm start`
+## 🔬 About PDB Files & Bioinformatics Background
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🏛 What is the Protein Data Bank (PDB)?
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The Protein Data Bank (PDB) is a publicly available repository containing 3D structural data of biomolecules such as proteins, DNA, and RNA. These structures are crucial in bioinformatics, drug discovery, and computational biology.
 
-### `npm test`
+- Official PDB website: https://www.rcsb.org/
+- Example PDB file download: Hemoglobin Structure (PDB ID: 2COK)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### 🔹 Importance in Bioinformatics
 
-### `npm run build`
+- Structural Biology: Helps in studying molecular interactions and functions.
+- Drug Discovery: Used in computational drug design and molecular docking.
+- AI & Machine Learning: Used in protein structure prediction (e.g., AlphaFold).
+- Genomics & Proteomics: Helps in functional annotation of proteins.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Features
+- Upload PDB files to visualize 3D molecular structures.
+- Uses 3Dmol.js for interactive protein rendering.
+- Clean React.js UI with drag-and-drop upload.
+- Dockerized for easy deployment.
+- Modern CSS Styling for a smooth user experience.
+- Supports multiple protein rendering styles.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🏗 Technologies & Frameworks Used
+- Frontend: React.js, JavaScript, HTML, CSS
+- 3D Visualization: `3Dmol.js`
+- File Upload Handling: `react-dropzone`
+- Containerization: Docker
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📥 Installation & Setup
+1. Clone the Repository
+```bash
+git clone https://github.com/your-username/protein-visualization.git
+cd protein-visualization
+```
+2. Install Dependencies
+```bash
+npm install
+```
+3. Start the Development Server
+```bash
+npm start
+```
+Now open http://localhost:3000 in your browser.
 
-### `npm run eject`
+## 🐳 Running the Docker Image
+To pull and run the Docker image from Docker Hub:
+```bash
+docker pull your-dockerhub-username/protein-visualization
+docker run -p 3000:3000 your-dockerhub-username/protein-visualization
+```
+Now the app should be accessible at http://localhost:3000.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📂 Project Structure
+```text
+protein-visualization/
+│── public/                      # Static assets
+│── src/                         # Source code
+│   ├── components/              # React components
+│   │   ├── FileUpload.js        # Handles file upload
+│   │   ├── ProteinVisualizer.js # Renders 3D protein structures
+│   ├── App.js                   # Main app component
+│── Dockerfile                   # Docker setup
+│── package.json                 # Project dependencies
+│── README.md                    # Project documentation
+```
