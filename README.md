@@ -13,7 +13,7 @@ This project is a React-based web application for visualizing Protein Data Bank 
 The Protein Data Bank (PDB) is a publicly available repository containing 3D structural data of biomolecules such as proteins, DNA, and RNA. These structures are crucial in bioinformatics, drug discovery, and computational biology.
 
 - Official PDB website: https://www.rcsb.org/
-- Example PDB file download: Hemoglobin Structure (PDB ID: 2COK)
+- Example PDB file download: Hemoglobin Structure (PDB ID: 2C0K)
 
 #### 🔹 Importance in Bioinformatics
 
